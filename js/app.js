@@ -1,16 +1,21 @@
+// * Global variables *********************************************
+// ************************************************************************
 const hourHand = document.querySelector(".hour-hand");
 const minHand = document.querySelector(".min-hand");
 const secondHand = document.querySelector(".second-hand");
 
 function setDate() {
   //   console.log("Hi");
+  // Date() = built in JS function
   const now = new Date();
 
   // * get central standard time *********************************************
+  // ************************************************************************
   const cstOffset = -6; // CST if UTC - 6
   const cstTime = new Date(now.getTime() + cstOffset * 60 * 60 * 1000);
 
   // * get seconds ***********************************************************
+  // ************************************************************************
   const seconds = cstTime.getSeconds(); //gets the seconds of every minute
   //   console.log(seconds);
   const secondsDegrees = (seconds / 60) * 360 + 90; //moves the clock hand degrees
@@ -18,11 +23,13 @@ function setDate() {
   //   console.log(seconds);
 
   // * get minutes **********************************************************
+  // ************************************************************************
   const minutes = cstTime.getMinutes();
   const minutesDegrees = (minutes / 60) * 360 + 90;
   minHand.style.transform = `rotate(${minutesDegrees}deg)`;
 
   // * get hour **************************************************************
+  // ************************************************************************
   const hour = cstTime.getHours();
   const hourDegrees = ((hour % 12) / 12) * 360 + 90;
   hourHand.style.transform = `rotate(${hourDegrees}deg)`;
