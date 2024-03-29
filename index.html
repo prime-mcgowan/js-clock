@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>JS + CSS Clock</title>
-    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <link rel="stylesheet" href="css/style.css" />
     <meta name="description" content="" />
 
     <meta property="og:title" content="" />
@@ -31,76 +31,7 @@
       </div>
     </div>
 
-    <style>
-      html {
-        background: #018ded url(https://unsplash.it/1500/1000?image=881&blur=5);
-        background-size: cover;
-        font-family: "helvetica neue";
-        text-align: center;
-        font-size: 10px;
-      }
-
-      body {
-        margin: 0;
-        font-size: 2rem;
-        display: flex;
-        flex: 1;
-        min-height: 100vh;
-        align-items: center;
-      }
-
-      .clock {
-        width: 30rem;
-        height: 30rem;
-        border: 20px solid white;
-        border-radius: 50%;
-        margin: 50px auto;
-        position: relative;
-        padding: 2rem;
-        box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
-          inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
-      }
-
-      .clock-face {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        transform: translateY(
-          -3px
-        ); /* account for the height of the clock hands */
-      }
-
-      .hand {
-        width: 50%;
-        height: 10px;
-        background: white;
-        position: absolute;
-        top: 50%;
-        transform-origin: 100%;
-        transform: rotate(90deg);
-        transition: all 0.05s;
-        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-      }
-
-      .hour-hand {
-        width: 40%; /* Adjust the width to make it shorter */
-        height: 10px;
-        background: white;
-        position: absolute;
-        top: 50%;
-        left: 50%; /* Center the hour hand horizontally */
-        transform-origin: 0%; /* Adjust transform origin to the left */
-        transform: rotate(
-          -90deg
-        ); /* Rotate it back to the correct starting position */
-        transition: all 0.05s;
-        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-      }
-
-      .second-hand {
-        background-color: #55fbfc;
-      }
-    </style>
+    <style></style>
     <script src="js/app.js"></script>
   </body>
 </html>
