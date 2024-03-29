@@ -31,7 +31,7 @@ function setDate() {
 // will have the clock run every second
 setInterval(setDate, 1000);
 
-// ChatGPT notes on cstOffset and cstTime
+// * ChatGPT notes on cstOffset and cstTime ****************************************************
 // now.getTime(): This part retrieves the current timestamp in milliseconds since January 1, 1970 (Unix epoch) for the current time in the local timezone. getTime() is a method of the Date object that returns the number of milliseconds elapsed since the epoch for the date and time specified by the Date instance (now in this case).
 
 // cstOffset * 60 * 60 * 1000: This part calculates the offset in milliseconds for the CST timezone. Let's break it down further:
@@ -43,3 +43,14 @@ setInterval(setDate, 1000);
 // new Date(...): Finally, this part creates a new Date object using the adjusted timestamp calculated above. This new Date object represents the current time in the CST timezone, which is stored in the cstTime variable.
 
 // So, in summary, const cstTime = new Date(now.getTime() + cstOffset * 60 * 60 * 1000); calculates the current time in the CST timezone by adding the offset to the current time in the local timezone and creates a Date object representing that time.
+
+// * ChatGPT notes on:  const hourDegrees = ((hour % 12) / 12) * 360 + 90; *********************
+// (hour % 12): This part calculates the hour in a 12-hour format. The % operator is the modulo operator, which gives the remainder of the division of two numbers. In this case, hour % 12 ensures that the hour value is always within the range of 0 to 11 (inclusive), effectively converting the hour to a 12-hour format.
+
+// ((hour % 12) / 12): This part normalizes the hour value to a range between 0 and 1. Since the hour value is now in a 12-hour format (ranging from 0 to 11), dividing it by 12 ensures that it falls within the range of 0 to 1.
+
+// ((hour % 12) / 12) * 360: This part converts the normalized hour value to degrees on a circle. Since a full circle has 360 degrees, multiplying the normalized hour value by 360 gives us the corresponding angle in degrees.
+
+// ((hour % 12) / 12) * 360 + 90: Finally, adding 90 degrees adjusts the rotation so that the hour hand starts pointing vertically upwards (at the 12 o'clock position). This adjustment ensures that the hour hand aligns correctly with the clock face.
+
+// So, in summary, const hourDegrees = ((hour % 12) / 12) * 360 + 90; calculates the rotation angle (in degrees) for the hour hand based on the current hour, ensuring it aligns properly with the clock face.
