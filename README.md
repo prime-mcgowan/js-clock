@@ -3,6 +3,8 @@
 The JS Clocks shows the user what time it is in the Central Standard time zone.
 Time is show with an hour-hand, minute-hand and seconds-hand.
 
+![Screen Shot 2024-04-02 at 9 44 13 AM](https://github.com/prime-mcgowan/js-clock/assets/113257735/9b981fe3-00b4-4628-8ca3-75334418d674)
+
 ## Technologies Used
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
